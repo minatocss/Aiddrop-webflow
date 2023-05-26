@@ -100,7 +100,8 @@ let insert_data_next = function () {
         document.getElementById('eth-' + i).innerHTML = parseFloat(processed_data[donations_interval[0] + i - 1]['EthAmount'])
         document.getElementById('mission-images-' + i).innerHTML = ''
         document.getElementById('tab-' + i).style['display'] = ''
-        processed_data[donations_interval[0] + i - 1]['Missions'].forEach(name => {
+        processed_data[donations_interval[0] + i - 1]['Missions'].forEach((name, idx) => {
+            if(idx > 2) return;
             document.getElementById('mission-images-' + i).innerHTML += '<img loading="lazy" sizes="30px" srcset=https://uploads-ssl.webflow.com/' + images[name] + ' 500w, https://uploads-ssl.webflow.com/' + images[name] + ' 800w, https://uploads-ssl.webflow.com/' + images[name] + ' 1001w" alt="" src=https://uploads-ssl.webflow.com/' + images[name] + '>'
         })
         if (donations_interval[0] + i <= 3) {
@@ -130,7 +131,8 @@ let insert_data_prev = function () {
         document.getElementById('eth-' + i).innerHTML = parseFloat(processed_data[donations_interval[0] + i - 1]['EthAmount'])
         document.getElementById('mission-images-' + i).innerHTML = ''
         document.getElementById('tab-' + i).style['display'] = ''
-        processed_data[donations_interval[0] + i - 1]['Missions'].forEach(name => {
+        processed_data[donations_interval[0] + i - 1]['Missions'].forEach((name, idx) => {
+            if(idx > 2) return;
             document.getElementById('mission-images-' + i).innerHTML += '<img loading="lazy" sizes="30px" srcset=https://uploads-ssl.webflow.com/' + images[name] + ' 500w, https://uploads-ssl.webflow.com/' + images[name] + ' 800w, https://uploads-ssl.webflow.com/' + images[name] + ' 1001w" alt="" src=https://uploads-ssl.webflow.com/' + images[name] + '>'
         })
         if (donations_interval[0] + i <= 3) {
