@@ -83,7 +83,7 @@ let insert_data_next = function () {
     if (donations_interval[1] >= processed_data.length)
         return
     donations_interval = [donations_interval[0] + 10, donations_interval[1] + 10]
-    document.getElementById('paginator').innerHTML = "Page " + (donations_interval[1] + 1) / 10 + ' of ' + Math.floor(processed_data.length / 10);
+    document.getElementById('paginator').innerHTML = "Page " + (donations_interval[1] + 1) / 10 + ' of ' + Math.floor(processed_data.length / 10 + 1);
     for (var i = 1; i <= 10; i++) {
         if (processed_data[donations_interval[0] + i - 1] == undefined) {
             document.getElementById('tab-' + i).style['display'] = 'None'
@@ -118,7 +118,7 @@ let insert_data_prev = function () {
     if (donations_interval[0] <= 0)
         return
     donations_interval = [donations_interval[0] - 10, donations_interval[1] - 10]
-    document.getElementById('paginator').innerHTML = "Page " + (donations_interval[1] + 1) / 10 + ' of ' + Math.floor(processed_data.length / 10);
+    document.getElementById('paginator').innerHTML = "Page " + (donations_interval[1] + 1) / 10 + ' of ' + Math.floor(processed_data.length / 10 + 1);
     for (var i = 1; i <= 10; i++) {
         if (processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '') == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
         else {
