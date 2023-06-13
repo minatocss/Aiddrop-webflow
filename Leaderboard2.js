@@ -148,6 +148,7 @@ let start_document = async function () {
     await getting_data();
     document.getElementById('next-btn').onclick = insert_data_next;
     document.getElementById('prev-btn').onclick = insert_data_prev;
+    filter = document.getElementById("Mission-filter").value;
 }
 start_document();
 document.getElementById("Mission-filter").onchange = function () {
