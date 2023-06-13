@@ -149,6 +149,12 @@ let start_document = async function () {
     document.getElementById('next-btn').onclick = insert_data_next;
     document.getElementById('prev-btn').onclick = insert_data_prev;
     filter = document.getElementById("Mission-filter").value;
+    const urlParams = new URLSearchParams(window.location.search);
+    const variableValue = urlParams.get('mission');
+    if(variableValue == 'Skatedonate'){
+        filter = 'Skate-Aid';
+        document.getElementById("Mission-filter").selectedIndex= 26
+    }
 }
 start_document();
 document.getElementById("Mission-filter").onchange = function () {
