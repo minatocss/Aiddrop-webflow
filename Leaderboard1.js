@@ -90,11 +90,11 @@ let insert_data_next = function () {
             continue;
         }
         if (processed_data[donations_interval[0] + i - 1]['Tweeter'] == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
-        else {document.getElementById('twitter-' + i).style['visibility'] = ''}
         else {
             let link = 'https://www.twitter.com/' + processed_data[donations_interval[0] + i - 1]['Tweeter'];
             document.getElementById('twitter-' + i).onclick = () => { window.open(link, '_blank').focus()};
-            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter']
+            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter'];
+            document.getElementById('twitter-' + i).style['visibility'] = '';
         }
         document.getElementById('address-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Address']
         document.getElementById('euro-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Euro']
@@ -122,11 +122,11 @@ let insert_data_prev = function () {
     document.getElementById('paginator').innerHTML = "Page " + (donations_interval[1] + 1) / 10 + ' of ' + Math.floor(processed_data.length / 10 + 1);
     for (var i = 1; i <= 10; i++) {
         if (processed_data[donations_interval[0] + i - 1]['Tweeter'] == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
-        else {document.getElementById('twitter-' + i).style['visibility'] = ''}
         else {
             let link = 'https://www.twitter.com/' + processed_data[donations_interval[0] + i - 1]['Tweeter'];
             document.getElementById('twitter-' + i).onclick = () => { window.open(link, '_blank').focus()};
-            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter']
+            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter'];
+            document.getElementById('twitter-' + i).style['visibility'] = '';
         }
         document.getElementById('address-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Address']
         document.getElementById('euro-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Euro']
