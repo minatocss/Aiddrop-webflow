@@ -151,7 +151,7 @@ let start_document = async function () {
     filter = document.getElementById("Mission-filter").value;
     const urlParams = new URLSearchParams(window.location.search);
     const variableValue = urlParams.get('mission');
-    if(variableValue.toLowerCase() == 'skatedonate'){
+    if(variableValue != null && variableValue.toLowerCase() == 'skatedonate'){
         filter = 'Skate-Aid';
         document.getElementById("Mission-filter").selectedIndex= 26
     }
