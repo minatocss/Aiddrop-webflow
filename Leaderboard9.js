@@ -48,7 +48,7 @@ getting_data = async () => {
                             'Address': d['Address'],
                             'EthAmount': parseFloat(d['EthAmount']).toFixed(3),
                             'Euro': (parseFloat(d['EthAmount']) * parseFloat(d['ConversionRate'])).toFixed(2),
-                            'Tweeter': d['Tweeter'],
+                            'Tweeter': d['Tweeter'].replace('@', ''),
                             'Missions': [d['Mission']]
                         }
                     }
@@ -89,11 +89,11 @@ let insert_data_next = function () {
             document.getElementById('tab-' + i).style['display'] = 'None'
             continue;
         }
-        if (processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '') == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
+        if (processed_data[donations_interval[0] + i - 1]['Tweeter'] == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
         else {
-            let link = 'https://www.twitter.com/' + processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '');
+            let link = 'https://www.twitter.com/' + processed_data[donations_interval[0] + i - 1]['Tweeter'];
             document.getElementById('twitter-' + i).onclick = () => { window.open(link, '_blank').focus()};
-            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '')
+            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter']
         }
         document.getElementById('address-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Address']
         document.getElementById('euro-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Euro']
@@ -120,11 +120,11 @@ let insert_data_prev = function () {
     donations_interval = [donations_interval[0] - 10, donations_interval[1] - 10]
     document.getElementById('paginator').innerHTML = "Page " + (donations_interval[1] + 1) / 10 + ' of ' + Math.floor(processed_data.length / 10 + 1);
     for (var i = 1; i <= 10; i++) {
-        if (processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '') == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
+        if (processed_data[donations_interval[0] + i - 1]['Tweeter'] == '') { document.getElementById('twitter-' + i).style['visibility'] = 'hidden' }
         else {
-            let link = 'https://www.twitter.com/' + processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '');
+            let link = 'https://www.twitter.com/' + processed_data[donations_interval[0] + i - 1]['Tweeter'];
             document.getElementById('twitter-' + i).onclick = () => { window.open(link, '_blank').focus()};
-            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter'].replace('@', '')
+            document.getElementById('twitter-' + i).innerHTML = '@' + processed_data[donations_interval[0] + i - 1]['Tweeter']
         }
         document.getElementById('address-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Address']
         document.getElementById('euro-' + i).innerHTML = processed_data[donations_interval[0] + i - 1]['Euro']
