@@ -25,7 +25,8 @@ let images = {
     "Local Tradition": "633404a85e0aa0228a89447f/635a4a8a55e8162ba7ebcf28_Local-Tradition_front.png",
     "Democracy": "633404a85e0aa0228a89447f/635a4ab8e95430814097c0d7_Democracy_front.png",
     "Earthquake Aid Turkey/Syria": "633404a85e0aa0228a89447f/63e25b204133e90af1801fe9_Earthquake-aid_Turkey-Syria_front.png",
-    "Skate-Aid": "633344f6fc0ce323cf6aa045/6461f9f1f11d350cba114193_SkateDonate_front%402x.png"
+    "Skate-Aid": "633344f6fc0ce323cf6aa045/6461f9f1f11d350cba114193_SkateDonate_front%402x.png",
+    "Global Gaming For Good":"633404a85e0aa0228a89447f/64de1cc9bdc6608fe06bf18a_SOS-Kinderdo%CC%88rfer-Weltweit_front_01.png”
 }
 let processed_data = [];
 let donations_interval = [-10, -1];
