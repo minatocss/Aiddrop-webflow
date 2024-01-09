@@ -156,7 +156,7 @@
       icon:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/65955976842d15ce08edaa19_Logo%20YB%20Cup%20of%20Hope%202024%20(1).png",
       colour:"#00b6f1",
     },
-    },
+    }
     index = (parseInt(document.getElementById("Mission-2").value) + 1) + '';
     document.getElementById("pod-image").src = pods[index].image;
     document.getElementById('icon-name').textContent = pods[index].name
