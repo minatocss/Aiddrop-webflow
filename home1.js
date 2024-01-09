@@ -1,5 +1,5 @@
 
-		let index = 1;
+    let index = 1;
     let pods = {
       1:{
       name: "Early Supporter",
@@ -144,6 +144,12 @@
       image:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/635a4ab8e95430814097c0d7_Democracy_front.png",
       icon:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/635a4ab1452f5c35292f321e_Icon_Democracy.svg",
       colour:"#1e4395",
+    },
+    31:{
+      name:"CUP OF HOPE 2024",
+      image:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/6596abdc9965f897acea8cfc_Cup-Of-Hope_front%402x.png",
+      icon:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/65955976842d15ce08edaa19_Logo%20YB%20Cup%20of%20Hope%202024%20(1).png",
+      colour:"#00b6f1",
     },
     }
     index = (parseInt(document.getElementById("Mission").value) + 1) + '';
