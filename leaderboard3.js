@@ -27,7 +27,7 @@ let images = {
     "Earthquake Aid Turkey/Syria": "633404a85e0aa0228a89447f/63e25b204133e90af1801fe9_Earthquake-aid_Turkey-Syria_front.png",
     "Skate-Aid": "633344f6fc0ce323cf6aa045/6461f9f1f11d350cba114193_SkateDonate_front%402x.png",
     "Global Gaming For Good":"633404a85e0aa0228a89447f/64de1cc9bdc6608fe06bf18a_SOS-Kinderdo%CC%88rfer-Weltweit_front_01.png",
-    "CUP OF HOPE 2024":"633404a85e0aa0228a89447f/65955976842d15ce08edaa19_Logo%20YB%20Cup%20of%20Hope%202024%20(1).png",
+    "CUP OF HOPE 2024":"633344f6fc0ce323cf6aa045/65a0e46ff133bce29caa91d8_Cup-Of-Hope_front%402x.png",
 }
 let processed_data = [];
 let donations_interval = [-10, -1];
