@@ -152,7 +152,7 @@
       colour:"#76BA58"},
     31:{
       name:"CUP OF HOPE 2024",
-      image:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/6596abdc9965f897acea8cfc_Cup-Of-Hope_front%402x.png",
+      image:"https://uploads-ssl.webflow.com/633344f6fc0ce323cf6aa045/65a0e46ff133bce29caa91d8_Cup-Of-Hope_front%402x.png",
       icon:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/65955976842d15ce08edaa19_Logo%20YB%20Cup%20of%20Hope%202024%20(1).png",
       colour:"#00b6f1",
     },
