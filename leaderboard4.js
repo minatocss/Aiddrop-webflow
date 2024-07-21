@@ -41,15 +41,15 @@ getting_data = async () => {
                 donations.forEach((d) => {
                     if (!d['Mission'].includes(filter)) { return }
                     if (dict[d['Address']]) {
-                        dict[d['Address']]['EthAmount'] = (parseFloat(d['EthAmount']) + parseFloat(dict[d['Address']]['EthAmount'])).toFixed(3);
-                        dict[d['Address']]['Euro'] = (parseFloat(dict[d['Address']]['Euro']) + parseFloat(d['EthAmount']) * parseFloat(d['ConversionRate'])).toFixed(2);
+                        dict[d['Address']]['EthAmount'] = (parseFloat(d['EthAmount']) + (parseFloat(d['EuroAmount']) * parseFloat(d['ConversionRate']))).toFixed(3);
+                        dict[d['Address']]['Euro'] = (parseFloat(dict[d['Address']]['Euro']) + parseFloat(d['EuroAmount'])).toFixed(2);
                         if (dict[d['Address']]['Tweeter'] == '') { dict[d['Address']]['Tweeter'] = d['Tweeter'] }
                         if (dict[d['Address']]['Missions'].length < 5 && !dict[d['Address']]['Missions'].includes(d['Mission'])) { dict[d['Address']]['Missions'].push(d['Mission']) };
                     } else {
                         dict[d['Address']] = {
                             'Address': d['Address'],
-                            'EthAmount': parseFloat(d['EthAmount']).toFixed(3),
-                            'Euro': (parseFloat(d['EthAmount']) * parseFloat(d['ConversionRate'])).toFixed(2),
+                            'EthAmount': (parseFloat(d['EuroAmount']) * parseFloat(d['ConversionRate'])).toFixed(3)
+                            'Euro': parseFloat(d['EuroAmount']).toFixed(2),
                             'Tweeter': d['Tweeter'].replace('@', ''),
                             'Missions': [d['Mission']]
                         }
