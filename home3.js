@@ -145,6 +145,11 @@
       icon:"https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/635a4ab1452f5c35292f321e_Icon_Democracy.svg",
       colour:"#1e4395",
     },
+    30:{
+      name: "Global Gaming For Good",
+      image: "https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/64de1cc9bdc6608fe06bf18a_SOS-Kinderdo%CC%88rfer-Weltweit_front_01.png",
+      icon: "https://uploads-ssl.webflow.com/633404a85e0aa0228a89447f/64e4e587d371852cfad2cce6_SOS-Gaming.svg",
+      colour:"#76BA58"},
     31:{
       name:"CUP OF HOPE 2024",
       image:"https://uploads-ssl.webflow.com/633344f6fc0ce323cf6aa045/65a0e46ff133bce29caa91d8_Cup-Of-Hope_front%402x.png",
