@@ -48,7 +48,7 @@ getting_data = async () => {
                     } else {
                         dict[d['Address']] = {
                             'Address': d['Address'],
-                            'EthAmount': (parseFloat(d['EuroAmount']) * parseFloat(d['ConversionRate'])).toFixed(3)
+                            'EthAmount': (parseFloat(d['EuroAmount']) * parseFloat(d['ConversionRate'])).toFixed(3),
                             'Euro': parseFloat(d['EuroAmount']).toFixed(2),
                             'Tweeter': d['Tweeter'].replace('@', ''),
                             'Missions': [d['Mission']]
